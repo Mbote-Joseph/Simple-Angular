@@ -1,5 +1,18 @@
-h1 {
+nav {
   background-color: #ee6e73;
   min-height: 50px;
   padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navlist {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+li {
+  list-style: none;
+  margin-right: 30px;
+  text-decoration-color: black;
 }

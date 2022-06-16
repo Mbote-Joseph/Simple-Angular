@@ -1,0 +1,56 @@
+<div class="container employee">
+  <h2>Employee component</h2>
+  <div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-12 col">
+      <button
+        class="btn btn-primary"
+        type="button"
+        name="button"
+        (click)="getInfo1()"
+      >
+        Employee 1
+      </button>
+      <div *ngIf="show1" class="card">
+        <ul class="list-group list-group-flush">
+          <li *ngFor="let info of infoReceived1" class="list-group-item">
+            {{ info }}
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12 col">
+      <button
+        class="btn btn-primary"
+        type="button"
+        name="button"
+        (click)="getInfo2()"
+      >
+        Employee 2
+      </button>
+      <div *ngIf="show2" class="card">
+        <ul class="list-group list-group-flush">
+          <li *ngFor="let info of infoReceived2" class="list-group-item">
+            {{ info }}
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12 col">
+      <button
+        class="btn btn-primary"
+        type="button"
+        name="button"
+        (click)="getInfo3()"
+      >
+        Employee 3
+      </button>
+      <div *ngIf="show3" class="card">
+        <ul class="list-group list-group-flush">
+          <li *ngFor="let info of infoReceived3" class="list-group-item">
+            {{ info }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
