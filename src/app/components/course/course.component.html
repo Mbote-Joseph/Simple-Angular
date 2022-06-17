@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let course of CourseList">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{ course.name }}</h5>
+          <img
+            [src]="course.imageUrl"
+            class="img-responsive"
+            alt="logo"
+            height="65px"
+          />
+          <p class="card-text">
+            {{ course.description }}
+          </p>
+          <a href="course" class="btn btn-primary">
+            Course ID: {{ course.id }}</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

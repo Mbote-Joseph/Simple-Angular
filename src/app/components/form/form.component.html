@@ -1,1 +1,55 @@
-<p>form works!</p>
+<img src="assets/images/logo.svg" alt="logo" height="65px" />
+
+<div class="container">
+  <h2>User Registration</h2>
+  <form #login="ngForm" (ngSubmit)="submit(login)">
+    <div class="form-group">
+      <label for="firstname">First Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="firstname"
+        placeholder="Enter First Name"
+        ngModel
+        [ngModelOptions]="{ standalone: true }"
+        required
+        minlength="2"
+      />
+    </div>
+    <div class="form-group">
+      <label for="lastname">Last Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="lastname"
+        placeholder="Enter Last Name"
+        ngModel="lastname"
+        [ngModelOptions]="{ standalone: true }"
+      />
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        placeholder="Enter Email"
+        [(ngModel)]="email"
+        [ngModelOptions]="{ standalone: true }"
+      />
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        placeholder="Enter Password"
+        ngModel
+        [ngModelOptions]="{ standalone: true }"
+      />
+    </div>
+
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </form>
+</div>
