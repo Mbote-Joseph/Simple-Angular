@@ -9,6 +9,14 @@ import { Courses } from '../../model';
 })
 export class CourseComponent implements OnInit {
   CourseList: Courses[] = [];
+  selectedCourse!: Courses;
+  clicked: boolean = false;
+
+  onSelect(course: Courses): void {
+    this.selectedCourse = course;
+    this.clicked = true;
+    console.log(course);
+  }
 
   constructor(private courseService: CourseService) {}
 
