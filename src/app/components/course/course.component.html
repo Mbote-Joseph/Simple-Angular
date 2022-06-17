@@ -4,7 +4,8 @@
       <div
         class="card"
         (click)="onSelect(course)"
-        routerLink="/{{ course.id }}"
+        [routerLink]="['/course', course.id]"
+        style="min-height: 300px"
       >
         <div class="card-body">
           <h5 class="card-title">{{ course.name }}</h5>
@@ -20,7 +21,7 @@
           <a
             (click)="onSelect(course)"
             class="btn btn-primary"
-            routerLink="/{{ course.id }}"
+            [routerLink]="['/course', course.id]"
           >
             Course ID: {{ course.id }}</a
           >
