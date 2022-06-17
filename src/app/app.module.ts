@@ -8,6 +8,9 @@ import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FormComponent } from './components/form/form.component';
 import { EmployeeComponent } from './components/employee/employee.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CourseComponent } from './components/course/course.component';
+import { CourseDetailsComponent } from './components/course-details/course-details.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +19,12 @@ import { EmployeeComponent } from './components/employee/employee.component';
     HomeComponent,
     FooterComponent,
     FormComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    CourseComponent,
+    CourseDetailsComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
