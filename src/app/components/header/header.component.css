@@ -16,3 +16,7 @@ li {
   margin-right: 30px;
   text-decoration-color: black;
 }
+
+a {
+  text-decoration: none;
+}
