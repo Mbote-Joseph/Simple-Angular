@@ -8,7 +8,7 @@ import { Courses } from '../../model';
 })
 export class CourseDetailsComponent implements OnInit {
   @Input() course: Courses | undefined;
-  @Input() courseList: Array<Courses>;
+  // @Input() courseList: Array<Courses>;
 
   constructor() {}
 
