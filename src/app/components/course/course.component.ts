@@ -10,9 +10,10 @@ import { Courses } from '../../model';
 })
 export class CourseComponent implements OnInit {
   CourseList: Courses[] = [];
-  selectedCourse!: Courses;
+  selectedCourse: Courses;
   clicked: boolean = false;
-  id: Courses | undefined;
+  id: any;
+  course: any;
 
   onSelect(course: Courses): void {
     this.selectedCourse = course;
@@ -22,7 +23,7 @@ export class CourseComponent implements OnInit {
 
   constructor(
     private courseService: CourseService,
-    private route: ActivatedRoute,
+    private activatedRoute: ActivatedRoute,
     private router: Router
   ) {}
 
@@ -35,6 +36,7 @@ export class CourseComponent implements OnInit {
   // goToCourseDetails(id){
   //   this.router.navigate(['/course/' + id]);
   // }
+  sub: any;
 
   ngOnInit(): void {
     this.getCourseList();
@@ -43,9 +45,15 @@ export class CourseComponent implements OnInit {
     // }
     // );
     // this.id = this.route.snapshot.paramMap.get('id');
-    const routeParams = this.route.snapshot.paramMap;
-    const courseIdFromRoute = Number(routeParams.get('id'));
+    // const routeParams = this.activatedRoute.snapshot.paramMap;
+    // const courseIdFromRoute = Number(routeParams.get('id'));
 
-    this.id = this.CourseList.find((course) => course.id === courseIdFromRoute);
+    // this.id = this.CourseList.find((course) => course.id === courseIdFromRoute);
+    //   this.sub= this.activatedRoute.paramMap.subscribe((params) => {
+    //   console.log(params);
+    //   this.id=params.get('id');
+    //   let courses= this.courseService.getCourseList();
+    //   this.course= courses.find((c: { id: any; }) => c.id == this.id);
+    // });
   }
 }
